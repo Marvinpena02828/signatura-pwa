@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../../store/authStore';
-import { supabase } from '../../utils/supabase';
+import { useAuthStore } from '../store/authStore';
+import { supabase } from '../utils/supabase';
 import toast from 'react-hot-toast';
 import { FiUsers, FiFileText, FiBarChart3, FiLogOut, FiMenu, FiX, FiTrash2 } from 'react-icons/fi';
 
