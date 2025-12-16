@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import { supabase } from '../utils/supabase';
 import toast from 'react-hot-toast';
-import { FiUsers, FiFileText, FiBarChart3, FiLogOut, FiMenu, FiX, FiTrash2 } from 'react-icons/fi';
+import { FiUsers, FiFileText, FiTrendingUp, FiLogOut, FiMenu, FiX, FiTrash2 } from 'react-icons/fi';
 
 export default function AdminDashboard() {
   const navigate = useNavigate();
@@ -168,7 +168,7 @@ export default function AdminDashboard() {
               activeTab === 'statistics' ? 'bg-purple-700' : 'hover:bg-purple-800'
             }`}
           >
-            <FiBarChart3 />
+            <FiTrendingUp />
             {sidebarOpen && <span>Statistics</span>}
           </button>
           <button
