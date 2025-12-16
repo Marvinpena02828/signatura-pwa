@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiShield, FiUsers, FiCheckCircle, FiLock, FiBarChart3, FiZap } from 'react-icons/fi';
+import { FiArrowRight, FiShield, FiUsers, FiCheckCircle, FiLock, FiTrendingUp, FiZap } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 export default function Landing() {
@@ -168,7 +168,7 @@ export default function Landing() {
             {/* Feature 4 */}
             <motion.div className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition" {...fadeInUp}>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <FiBarChart3 className="text-2xl text-blue-600" />
+                <FiTrendingUp className="text-2xl text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Complete Audit Trail</h3>
               <p className="text-gray-600">
