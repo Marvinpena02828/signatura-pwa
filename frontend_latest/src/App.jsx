@@ -6,23 +6,13 @@ import { supabase } from './utils/supabase';
 
 // Pages
 import Landing from './pages/Landing';
-import AllLoginPages from './pages/AllLoginPages';
-import IssuerDashboard from './pages/IssuerDashboard';
-import OwnerDashboard from './pages/OwnerDashboard';
-import AdminDashboard from './pages/AdminDashboard';
-
-// NotFound component
-const NotFound = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-      <p className="text-xl text-gray-600 mb-8">Page not found</p>
-      <a href="/" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-        Go Home
-      </a>
-    </div>
-  </div>
-);
+import IssuerLogin from './pages/Login/IssuerLogin';
+import OwnerLogin from './pages/Login/OwnerLogin';
+import AdminLogin from './pages/Login/AdminLogin';
+import IssuerDashboard from './pages/Dashboard/IssuerDashboard';
+import OwnerDashboard from './pages/Dashboard/OwnerDashboard';
+import AdminDashboard from './pages/Dashboard/AdminDashboard';
+import NotFound from './pages/NotFound';
 
 // Protected Route Component
 const ProtectedRoute = ({ children, requiredRole }) => {
@@ -116,8 +106,10 @@ function App() {
         {/* Public Routes */}
         <Route path="/" element={<Landing />} />
 
-        {/* Login Routes - all handled by AllLoginPages */}
-        <Route path="/login/:role" element={<AllLoginPages />} />
+        {/* Login Routes */}
+        <Route path="/login/issuer" element={<IssuerLogin />} />
+        <Route path="/login/owner" element={<OwnerLogin />} />
+        <Route path="/login/admin" element={<AdminLogin />} />
 
         {/* Protected Routes - Issuer */}
         <Route
