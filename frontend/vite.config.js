@@ -78,11 +78,18 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      external: ['supabase'],
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'supabase'],
+          vendor: ['react', 'react-dom'],
         },
       },
     },
+  },
+  ssr: {
+    noExternal: ['@supabase/supabase-js'],
+  },
+  optimizeDeps: {
+    include: ['@supabase/supabase-js'],
   },
 });
