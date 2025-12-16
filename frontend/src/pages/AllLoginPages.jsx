@@ -3,7 +3,7 @@ import { useNavigate, Link, useParams } from 'react-router-dom';
 import { supabase } from '../utils/supabase';
 import { useAuthStore } from '../store/authStore';
 import toast from 'react-hot-toast';
-import { FiMail, FiLock, FiBuilding2, FiUser, FiShield, FiEye, FiEyeOff, FiArrowLeft } from 'react-icons/fi';
+import { FiMail, FiLock, FiBriefcase, FiUser, FiShield, FiEye, FiEyeOff, FiArrowLeft } from 'react-icons/fi';
 
 export default function AllLoginPages() {
   const { role = 'issuer' } = useParams();
@@ -27,7 +27,7 @@ export default function AllLoginPages() {
     issuer: {
       title: 'Issuer Portal',
       subtitle: 'Issue and manage credentials',
-      icon: FiBuilding2,
+      icon: FiBriefcase,
       color: 'blue',
       demoEmail: 'issuer@demo.com',
       demoPass: 'Demo@1234',
